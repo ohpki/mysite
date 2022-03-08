@@ -1,7 +1,7 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-.container-fluid {
+.mainvisual {
   width: 100%;
   height: 650px;
   background-image: url(mv.png);
@@ -9,9 +9,23 @@
   background-position: left center;
 }
 
+@media screen and (max-width:768px) {
+  .mainvisual {
+    background-image: url(code.png);
+    background-position: center;
+  }
+}
+
+
 .mainvisual-logo {
  padding-top: 200px;
 
+}
+
+@media screen and (max-width:768px) {
+  .mainvisual-logo {
+    margin: 0px 10px;
+  }
 }
 
 .mainvisual-logo p{
@@ -27,27 +41,28 @@
   padding-tp: 10px;
 }
 
-.portfolio {
-  width: 920px;
-  padding-top: 90px;
-  padding-bottom: 90px;
-  margin: 0 auto;
+.content {
+  width: 100%;
+  padding: 90px 0px;
   display: flex;
- justify-content: center;
-
+  background-color: #ECEFF1;
+  flex-direction: column;
+  align-items: center;
 }
 
-.portfolio-logo {
+.content:nth-child(2n) {
+  background-color: white;
+}
+
+.content-logo {
+  width: 100px;
   font-size: 32px;
-  width: 120px;
-  margin: 0 auto;
   padding-bottom: 8px;
-  position: absolute;
-
-  display: block;
+  margin-bottom: 30px;
+  position:  relative;
 }
 
-.portfolio-logo:before {
+.content-logo:before {
   content: '';
   position: absolute;
   left: 50%;
@@ -71,6 +86,7 @@
 }
 
 .portfolio-text {
+  width: 100%;
   margin-top: 56px;
   padding: 30px 0px;
    display: flex;
@@ -118,4 +134,178 @@
   height: 250px;
   background-image: url(webcamp-mother.png);
   background-size: cover;
+}
+
+@media screen and (max-width:768px) {
+  .portfolio-image1,
+  .portfolio-image2,
+  .portfolio-image3,
+  .portfolio-image4,
+  .portfolio-image5,
+  .portfolio-image6 {
+    background-position: center;
+    margin-right: 0px;
+  }
+}
+
+
+.feature-contents {
+  width: 980px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width:768px) {
+  .feature-contents {
+    width: 100%;
+  }
+}
+
+.feature-content {
+  width: 320px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width:768px) {
+  .feature-content {
+    width: 100%;
+  }
+}
+
+
+.feature-content:nth-child(3n) {
+  margin-right: 0px;
+}
+
+.feature-icon {
+  width: 60px;
+  margin: 0 auto;
+  font-size: 60px;
+  display: block;
+}
+
+.feature-content span {
+  width: 70px;
+  margin: 0 auto;
+  font-size: 20px;
+  padding: 10px 0px;
+  display: block;
+}
+
+
+.profile-main {
+  width: 1024px;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-main-content {
+  width: 512px;
+}
+
+@media screen and (max-width:768px) {
+   .profile-main-content {
+      width: 100%;
+   }
+}
+
+.profile-main-content:first-child {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-image {
+  background-image: url(my-icon.jpg);
+  background-size: 250px 250px;
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  width:  250px;       /* ※縦横を同値に */
+  height: 250px;
+}
+
+.profile-main-content span {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.profile-main-content p {
+  margin-bottom: 20px;
+}
+
+.contact-main {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-main-box {
+  width: 400px;
+
+}
+
+@media screen and (max-width:768px) {
+   .contact-main-box {
+      width: 100%;
+   }
+}
+
+
+.contact-main-box span {
+  width: 50px;
+  font-size: 20px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  display: block;
+
+}
+
+.contact-main-box p {
+  width: 100px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  display: block;
+
+}
+
+
+.contact-icon {
+  width: 70px;
+  font-size: 50px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+
+@media screen and (max-width:768px) {
+  .portfolio-images,
+  .profile-main,
+  .contact-main {
+  display: flex;
+  justify-contact: center;
+  width: 100%;
+}
+}
+@media screen and (max-width:768px) {
+   .profile-main,
+   .contact-main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   }
+}
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .profile-main-content p {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+  .content {
+  padding: 90px 10px;
+
+}
 }
